@@ -33,16 +33,6 @@
             animation: down .5s ease-out;
         }
 
-        .panel {
-            height: 100vh;
-            position: sticky;
-            top: 0;
-        }
-
-        .card-img-top {
-            overflow: hidden;
-        }
-
         .image {
             transition: all .5s;
             transform: scale(1);
@@ -50,6 +40,12 @@
 
         .image:hover {
             transform: scale(1.1);
+        }
+
+        #insta {
+            background: linear-gradient(18deg, rgba(254, 218, 117, 1) 0%, rgba(250, 126, 30, 1) 25%, rgba(214, 41, 118, 1) 50%, rgba(150, 47, 191, 1) 75%, rgba(79, 91, 213, 1) 100%);
+            color: transparent;
+            background-clip: text;
         }
 
         @keyframes down {
@@ -72,20 +68,21 @@
                     data-bs-toggle="collapse" data-bs-target="#navCollapse">
                     <i class="bi bi-grid-3x3-gap fs-2 text-white" id="icon"></i>
                 </button>
-                <a href="#home" class="navbar-brand fw-bold fs-4 mx-3 text-white d-flex align-items-center"><i
-                        class="bi bi-geo-alt-fill me-3"></i>Poblacion</a>
+                <a href="#home" class="navbar-brand fw-bold fs-4 mx-3 text-white d-flex align-items-center"><img
+                        style="width: 60px; border-radius: 50%; margin-right: 15px;" src="logo.png" alt="">Barangay
+                    Catarman</a>
             </div>
             <div class="collapse navbar-collapse ms-3" id="navCollapse">
                 <hr class="border border-white">
-                <ul class="nav nav-pills">
+                <ul class="nav nav-pills gap-3">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link border border-white me-2">Home</a>
+                        <a href="#home" class="nav-link border border-white border-opacity-25">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link me-2">About</a>
+                        <a href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contacts" class="nav-link me-2">Contacts</a>
+                        <a href="#contacts" class="nav-link ">Contacts</a>
                     </li>
                 </ul>
             </div>
@@ -94,73 +91,85 @@
     <div data-bs-spy="scroll" data-bs-target="#navs" data-bs-smooth-scroll="true" class="scrollspy-example-2"
         style="position: relative;" tabindex="0">
         <div id="home"></div>
-        <div class="panel container-fluid p-0" style="display: grid; place-items: center;">
+        <div class="container-fluid p-0"
+            style="height: 100vh; display: grid; place-items: center; position: sticky; top: 0;">
             <img class="w-100 object-fit-cover" style="height: 100vh; filter: contrast(.8); filter: brightness(.8);"
-                src="bg.jpg" alt="">
+                src="background.png" alt="">
             <h1 class="text-white text-center text-break" style="font-size: 50px; position: absolute;">
-                <span class="border-bottom border-white">Welcome</span> <span
-                    class="border-bottom border-white">To</span>
-                <span class="border-bottom border-white">Poblacion</span>
+                <span class="border-bottom border-white">Welcome</span>
+                <span class="border-bottom border-white">To</span>
+                <span class="border-bottom border-white">Barangay</span>
+                <span class="border-bottom border-white">Catarman</span>
             </h1>
         </div>
-        <div id="about" class="text-center container-fluid bg-primary text-white"
-            style="position: relative; height: 100vh; padding: 80px;">
-            <h1 class="mb-5" style="font-size: 50px;">About Catarman</h1>
+        <div id="about"></div>
+        <div class="text-center bg-dark text-white d-flex flex-column justify-content-center align-items-center px-4"
+            style="height: 100vh; position: sticky; top: 0;">
+            <h1 class="mb-5" style="font-size: 30px;">About Catarman</h1>
             <div class="row align-items-center">
                 <div class="col-md">
-                    <h5 class="fw-light">Poblacion is a barangay in the municipality of Cordova, in the province of Cebu. Its population
-                        as
-                        determined by the 2020 Census was 10,163. This represented 14.40% of the total population of
-                        Cordova.
-
-                        Residents congregate in Baranggay Poblacion for a variety of events, and guests can get a taste
-                        of the
-                        customs and culture of the area.
-
-                        Barangay Poblacion is probably the town center or central district of Cordova, housing a number
-                        of
-                        public buildings, businesses, and government offices.
+                    <h5 class="fw-light">Barangay Catarman is part of the municipality of Cordova in Cebu, Philippines.
+                        The history of Catarman is intertwined with that of Cordova, which was originally established as
+                        a separate municipality on May 22, 1863, by Governor General Rafael Echague. This period of
+                        independence was short-lived, as Cordova was re-annexed to Opon (now Lapu-Lapu City) during the
+                        American colonial period. It regained its municipal status on January 1, 1913, through an
+                        executive order by US Governor General Newton W. Gilbert (CORDOVA CEBU) (The History Of
+                        Cordova).
+                        <br><br>
+                        Catarman, as one of the barangays of Cordova, has developed over the years along with the
+                        municipality. The area is characterized by its coastal location, with some regions at an
+                        elevation of approximately 6.7 meters above sea level. As of the 2020 Census, Catarman had a
+                        population of 5,844 people (PhilAtlas).
                     </h5>
-                </div>
-                <div class="col d-flex justify-content-center align-items-center gap-5">
-                    <div class="card p-3 me-5">
-                        <div class="card-img-top mb-3">
-                            <a class="map"
-                                href="https://www.google.com/maps/@10.2509057,123.9493893,3a,90y,282.98h,90t/data=!3m9!1e1!3m7!1sLGxuUAwc9tAifsyuoh7BoQ!2e0!7i16384!8i8192!9m2!1b1!2i58?entry=ttu"
-                                target="_blank"><img class="image w-100" src="map.png" alt=""></a>
-                        </div>
-                        <span class="card-title text-center fs-4 fw-medium">Cordova
-                            Catarman Barangay Hall</span>
-                        <span class="card-text  text-center"><i class="bi bi-telephone-fill me-2 fs-5"></i>
-                            <a href="tel:+032-401-4062">032-401-4062</a></span>
-                    </div>
                 </div>
             </div>
         </div>
-        <div id="contacts"></div>
-        <div class="panel bg-dark-subtle container-fluid" style="padding-top: 80px;">
-            <h1 class="text-center" style="font-size: 50px; margin-bottom: 100px;">Contacts</h1>
-            <div class="row gap-5 mx-3">
-                <div class="card col-md p-3"><span class="card-title text-center fs-4 fw-medium">Cordova Fire
-                        Station</span><span class="card-text  text-center"><i
-                            class="bi bi-telephone-fill me-3 fs-5"></i><a href="tel:+0933
-                            394 9073">0933
-                            394 9073</a></span>
+        <div id="contacts" class="bg-dark-subtle text-center"
+            style="height: 150vh; position: sticky; top: 0; padding-top: 100px;">
+            <div class="col-md d-flex flex-column align-items-center px-0 mb-5">
+                <h1 class="text-center" style="font-size: 30px; margin-bottom: 50px;">Contact Us</h1>
+                <a id="tel2" href="tel:+0945 234 2175" style="text-decoration: none;"><i id="tel-icon2"
+                        class="text-black bi bi-telephone me-2 fs-5"></i>
+                    <span class="text-black fs-5">Phone: </span>
+                    <span class="border-bottom border-primary">0945 234 2175</span>
+                </a>
+                <a id="env" href="mailto:skcatarmancordova.com" style="text-decoration: none;"><i id="env-icon"
+                        class="text-black bi bi-envelope me-2 fs-5"></i>
+                    <span class="text-black fs-5">Email: </span>
+                    <span class="border-bottom border-primary">skcatarmancordova.com</span>
+                </a>
+            </div>
+            <div class="col-md d-flex flex-column align-items-center px-0">
+                <h1 class="text-center" style="font-size: 30px; margin-bottom: 50px;">Follow us</h1>
+                <div class="d-flex gap-5">
+                    <a href="https://www.facebook.com/catarmancordova.ph/" target="_blank"><i style="font-size: 50px;"
+                            class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/explore/locations/344158647/catarman-cordova-cebu/"
+                        target="_blank"><i id="insta" style="font-size: 50px;" class="bi bi-instagram"></i></a>
                 </div>
-                <div class="card col-md p-3"><span class="card-title text-center fs-4 fw-medium">Cordova Police
-                        Station</span><span class="card-text  text-center"><i
-                            class="bi bi-telephone-fill me-3 fs-5"></i><a href="tel:+(032) 496 8164">(032) 496
-                            8164</a></span></div>
+            </div>
+            <p class="mt-5 mb-0 px-0"><i class="bi bi-c-circle"></i> 5 RANGERS BSIT - 1C</p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center gap-5">
+            <div class="card mb-3 rounded rounded-5" style="overflow: hidden;">
+                <div style="overflow: hidden;">
+                    <a class="map"
+                        href="https://www.google.com/maps/@10.2509057,123.9493893,3a,90y,282.98h,90t/data=!3m9!1e1!3m7!1sLGxuUAwc9tAifsyuoh7BoQ!2e0!7i16384!8i8192!9m2!1b1!2i58?entry=ttu"
+                        target="_blank"><img class="image w-100" src="map.png" alt=""></a>
+                </div>
+                <span class="card-title text-center fs-4 fw-medium m-2">Cordova
+                    Catarman Barangay Hall</span>
+                <span class="card-text  text-center m-2"><i id="tel-icon" class="bi bi-telephone me-2 fs-5"></i>
+                    <a id="tel" href="tel:+032-401-4062" style="text-decoration: none;"><span
+                            class="border-bottom border-primary">032-401-4062</span></a></span>
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script>
+
         // For Burger Menu
         var button = document.getElementById('button')
         var icon = document.getElementById('icon')
@@ -173,6 +182,34 @@
             }
         })
         // For Burger Menu
+
+        // For Icon Hovers 
+        var tel = document.getElementById('tel')
+        var telIcon = document.getElementById('tel-icon')
+        var tel2 = document.getElementById('tel2')
+        var telIcon2 = document.getElementById('tel-icon2')
+        var env = document.getElementById('env')
+        var envIcon = document.getElementById('env-icon')
+
+        tel.addEventListener('mouseover', () => {
+            telIcon.classList = "bi bi-telephone-fill me-2 fs-5"
+        })
+        tel.addEventListener('mouseout', () => {
+            telIcon.classList = "bi bi-telephone me-2 fs-5"
+        })
+        tel2.addEventListener('mouseover', () => {
+            telIcon2.classList = "text-black bi bi-telephone-fill me-2 fs-5"
+        })
+        tel2.addEventListener('mouseout', () => {
+            telIcon2.classList = "text-black bi bi-telephone me-2 fs-5"
+        })
+        env.addEventListener('mouseover', () => {
+            envIcon.classList = "text-black bi bi-envelope-fill me-2 fs-5"
+        })
+        env.addEventListener('mouseout', () => {
+            envIcon.classList = "text-black bi bi-envelope me-2 fs-5"
+        })
+        // For Icon Hovers
     </script>
 </body>
 
